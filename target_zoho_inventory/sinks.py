@@ -105,7 +105,7 @@ class BuyOrderSink(ZohoInventorySink):
             payload.update({"reference_number":record.get("id")})
 
         if record.get("terms"):
-            payload.update({"terms": record.get("terms")})
+            payload.update({"payment_terms": record.get("terms")})
 
         #get supplier_name
         if record.get("supplier_name"):
